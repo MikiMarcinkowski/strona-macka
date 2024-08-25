@@ -1,0 +1,38 @@
+.footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.footerContent {
+  margin-bottom: 20px;
+}
+
+.contactInfo {
+    
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.socialLink {
+  color: rgb(61, 77, 228);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 14px;
+}

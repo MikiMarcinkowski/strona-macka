@@ -1,0 +1,46 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  background-color: #343a40;
+  padding: 10px 20px;
+}
+
+.menuItem {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background-color: #495057;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #495057;
+  border: 1px solid #343a40;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.submenuItem {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.submenuItem:hover {
+  background-color: #6c757d;
+}
+
+/* Dodajemy klasę dla rozwijanego menu */
+.show {
+  display: block;
+}

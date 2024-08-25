@@ -1,0 +1,48 @@
+.container {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.optionButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.optionButton:hover {
+  background-color: #0056b3;
+}
+
+.offerContent {
+  text-align: center;
+}
+
+.offerItem {
+  background-color: #f8f9fa;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.offerItem h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.offerItem p {
+  font-size: 1.2rem;
+  color: #666;
+}

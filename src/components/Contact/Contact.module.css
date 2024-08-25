@@ -1,0 +1,34 @@
+.container {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.contactInfo {
+  margin-bottom: 20px;
+}
+
+.contactItem {
+  margin-bottom: 15px;
+}
+
+.contactItem h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.contactItem p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.mapContainer {
+  margin-top: 20px;
+}
+
+.mapContainer h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}

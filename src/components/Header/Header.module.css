@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.email,
+.phone {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
