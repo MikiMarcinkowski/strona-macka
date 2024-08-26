@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className={css.header}>
       <div className={css.logo}>
-        <img src="./src/assets/favicon/android-chrome-192x192.png" alt="Logo" />
+        <img src="./src/assets/photo/favicon/android-chrome-192x192.png" alt="Logo" />
       </div>
       <div className={css.contactInfo}>
         <a href="mailto:contact@example.com" className={css.email}>

@@ -4,7 +4,7 @@ import css from "./AboutMe.module.css"; // Importujemy moduł CSS dla stylizacji
 function AboutMe() {
   return (
     <div className={css.container}>
-      <img src="./src/photo/maciek-fartuch.webp" alt="Moje zdjęcie" className={css.photo} />
+      <img src="./src/assets/photo/maciek-fartuch.webp" alt="Moje zdjęcie" className={css.photo} />
       <p className={css.description}>
         mgr Maciej Marcinkowski- jestem zawodowym fizjoterapeutą, pasjonatem
         ludzkiego ciała oraz zdrowego trybu życia. Od 2012 czynnie zajmuję się
