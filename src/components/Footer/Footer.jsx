@@ -5,16 +5,16 @@ import {
   BiLogoInstagramAlt,
 } from "react-icons/bi";
 
-function Footer() {
+function Footer({phone, mail}) {
   return (
     <footer className={css.footer}>
       <div className={css.footerContent}>
         <div className={css.contactInfo}>
-          <p>Telefon: +48 123 456 789</p>
+          <p>Telefon: { phone}</p>
           <p>
             Email:{" "}
             <a href="mailto:contact@example.com" className={css.contactInfo}>
-              contact@example.com
+              {mail}
             </a>
           </p>
         </div>

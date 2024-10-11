@@ -1,22 +1,22 @@
 // import React from "react";
 import css from "./Contact.module.css"; // Importujemy moduł CSS dla stylizacji
 
-function Contact() {
+function Contact({phone, mail}) {
   return (
     <div className={css.container}>
       <h3>Kontakt</h3>
       <div className={css.contactInfo}>
         <div className={css.contactItem}>
           <h4>Adres:</h4>
-          <p>ul. Przykładowa 12, 00-001 Warszawa</p>
+          <p>Radomsko oraz Zalesiczki</p>
         </div>
         <div className={css.contactItem}>
           <h4>Telefon:</h4>
-          <p>+48 123 456 789</p>
+          <p>{ phone}</p>
         </div>
         <div className={css.contactItem}>
           <h4>Email:</h4>
-          <p>kontakt@przyklad.pl</p>
+          <p>{mail}</p>
         </div>
       </div>
       <div className={css.mapContainer}>

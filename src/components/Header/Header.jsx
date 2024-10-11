@@ -1,21 +1,21 @@
 import React from "react";
-import css from "./Header.module.css"; // Importujemy moduł CSS jako 'css'
+import css from "./Header.module.css"; 
+import Logo from "../../assets/favicon/favicon-32x32.png";
 
-function Header() {
+function Header({phone, mail}) {
   return (
     <header className={css.header}>
       <div className={css.logo}>
         <img
-          src="src\assets\favicon\favicon-16x16.png
-"
+          src={Logo}
           alt="Logo"
         />
       </div>
       <div className={css.contactInfo}>
         <a href="mailto:contact@example.com" className={css.email}>
-          contact@example.com
+          {mail}
         </a>
-        <span className={css.phone}>+48 123 456 789</span>
+        <span className={css.phone}>{ phone}</span>
       </div>
     </header>
   );
