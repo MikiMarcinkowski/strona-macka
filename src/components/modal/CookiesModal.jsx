@@ -1,34 +1,41 @@
-// components/CookiesModal.jsx
+// src/components/modal/CookiesModal.jsx
+import React, { useEffect, useState } from "react";
+import styles from "./CookiesModal.module.css"; // Upewnij się, że stworzyłeś ten plik CSS
 
-import css from "./CookiesModal.module.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCookieBite } from "@fortawesome/free-solid-svg-icons";
+const CookiesModal = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
-const CookiesModal = ({ onAccept, onReject }) => {
+  useEffect(() => {
+    // Sprawdź, czy zgoda na ciasteczka została już zapisana
+    const isConsentGiven = localStorage.getItem("cookiesConsent");
+    if (!isConsentGiven) {
+      setIsVisible(true); // Pokaż modal, jeśli zgoda nie została udzielona
+    }
+  }, []);
+
+  const handleAccept = () => {
+    localStorage.setItem("cookiesConsent", "accepted"); // Zapisz zgodę w localStorage
+    setIsVisible(false);
+  };
+
+  const handleDecline = () => {
+    localStorage.setItem("cookiesConsent", "declined"); // Opcjonalnie zapisz odmowę
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null; // Ukryj modal, jeśli nie jest widoczny
+
   return (
-    <div className={css.modal__container}>
-      <div className={css.modal__content}>
-        <h2 className={css.modal__text}>
-          {/* <FontAwesomeIcon icon={faCookieBite} className={css.icon} /> */}
-          Używamy ciasteczek!</h2>
-        <p className={css.modal__text}>
-          
-          Używamy ciasteczek! Cześć, ta strona używa wymaganych ciasteczek aby
-          zapewnić poprawne działanie i ciasteczka trackingowe aby lepiej
-          zrozumieć co Cie interesuje. To drugie będzie dopiero po
-          zaakceptowaniu.{" "}
-          <a href="#polityka-cookies" className={css.link}>
-            Polityką Cookies
-          </a>
-          .
+    <div className={styles.modalOverlay}>
+      <div className={styles.modal}>
+        <h2>Polityka Ciasteczek</h2>
+        <p>
+          Ta strona używa ciasteczek, aby zapewnić najlepsze doświadczenie.
+          Kontynuując przeglądanie, wyrażasz zgodę na ich użycie.
         </p>
-        <div className={css.modal__buttons}>
-          <button className={css.button} onClick={onAccept}>
-            Akceptuj
-          </button>
-          <button className={css.button} onClick={onReject}>
-            Odrzuć
-          </button>
+        <div className={styles.buttonContainer}>
+          <button onClick={handleAccept}>Akceptuję</button>
+          <button onClick={handleDecline}>Odmowa</button>
         </div>
       </div>
     </div>

@@ -1,46 +1,59 @@
-.menu {
+@media (max-width: 768px) {
+  .menuContainer {
+    flex-direction: column; 
+  }
+}
+.menuContainer {
+  position: relative; /* Positioning for the dropdown menu */
   display: flex;
-  justify-content: center;
-  background-color: #343a40;
-  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Padding around the menu */
+  background-color: black; /* Background color for the menu */
 }
 
-.menuItem {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  position: relative;
-  cursor: pointer;
+.hamburgerIcon {
+  font-size: 30px; /* Size of the icon */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: rgb(5, 190, 247); /* Icon color */
+  transition: transform 0.3s ease; /* Smooth transition for any transformations */
 }
 
-.menuItem:hover {
-  background-color: #495057;
+/* Styles for the dropdown menu */
+.menu {
+  display: none; /* Hide menu by default */
+  position: absolute; /* Positioning dropdown */
+  top: 50px; /* Distance from the top */
+  left: 0; /* Align left */
+  background-color: white; /* Background color of the dropdown */
+  border: 1px solid #ddd; /* Border for the dropdown */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition for dropdown */
+  z-index: 1000; /* Ensure it appears above other elements */
 }
 
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #495057;
-  border: 1px solid #343a40;
-  padding: 10px;
-  z-index: 1000;
-}
-
-.submenuItem {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.submenuItem:hover {
-  background-color: #6c757d;
-}
-
-/* Dodajemy klasę dla rozwijanego menu */
 .show {
-  display: block;
+  display: block; /* Show menu when toggled */
+  opacity: 1; /* Fully opaque */
+  visibility: visible; /* Make it visible */
 }
+
+.menu a {
+  display: block; /* Each link takes up full width */
+  padding: 10px 15px; /* Padding around the links */
+  color: rgb(3, 3, 3); /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.menu a:hover {
+  background-color: orange; /* Background on hover */
+  color: white; /* Change text color on hover */
+}
+
+.active {
+  font-weight: bold; /* Bold text for active link */
+  background-color: orange; /* Background color for active link */
+  color: white; /* Text color for active link */
+}
+

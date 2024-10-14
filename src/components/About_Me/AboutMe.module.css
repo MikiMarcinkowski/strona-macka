@@ -1,5 +1,9 @@
+.about{
+    text-align: center;
+}
+
 .about__container {
-  text-align: center;
+
   margin: 50px auto;
   max-width: 800px;
   display: flex;
@@ -17,4 +21,9 @@
   font-size: 1.2rem;
   color: #333;
   line-height: 1.6;
+}
+
+.licenceNumber {
+ text-align: center;
+ 
 }

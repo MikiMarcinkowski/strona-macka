@@ -1,55 +1,38 @@
-
-.modal__container {
+/* src/components/modal/cookies.module.css */
+.modalOverlay {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  background-color: #ffffff; /* Kolor tła */
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Cień */
-  padding: 15px;
-  z-index: 1000; /* Ustawienie na wierzchu */
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Upewnij się, że modal jest nad innymi elementami */
 }
 
-.modal__content {
-  max-width: 800px;
-  width: 100%;
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+  width: 300px; /* Możesz dostosować szerokość */
 }
 
-.modal__text {
-  margin: 0;
-  color: #333;
-  font-size: 1rem;
+.buttonContainer {
+  margin-top: 20px;
 }
 
-.modal__buttons {
-  margin-top: 10px;
-}
-
-.button {
-  background-color: #ff5722; /* Kolor przycisku */
-  color: #ffffff; /* Kolor tekstu */
-  border: none;
+button {
+  margin: 0 10px;
   padding: 10px 15px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 0 5px;
 }
 
-.button:hover {
-  background-color: #e64a19; /* Kolor przycisku po najechaniu */
-}
-
-.link {
-  color: #ff5722; /* Kolor linku */
-  text-decoration: underline; /* Podkreślenie linku */
-}
-
-.icon {
-  margin-right: 8px; /* Odstęp między ikoną a tekstem */
-  font-size: 1.5rem; /* Rozmiar ikony */
-  color: #ff5722; /* Kolor ikony */
+button:hover {
+  background-color: #f0f0f0; /* Dostosuj kolor na hover */
 }
